@@ -1,0 +1,41 @@
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+release.properties
+
+# Spring Boot / fichiers générés
+HELP.md
+.mvn/
+mvnw
+mvnw.cmd
+*.mv.db
+*.h2.db
+application-local.properties
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
