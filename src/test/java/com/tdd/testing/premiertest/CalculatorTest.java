@@ -20,4 +20,18 @@ class CalculatorTest {
         assertEquals(5, somme);
     }
 
+    @Test
+    void testMultiplyTwoPositiveNumbers() {
+        //Arrange
+        int a = 3;
+        int b = 5;
+        Calculator calculator = new Calculator();
+
+        //Act
+        int somme = calculator.multiply(a, b);
+
+        //Assert
+        assertEquals(15, somme);
+    }
+
 }
