@@ -9,7 +9,7 @@ import java.text.MessageFormat;
 import java.time.Duration;
 import java.time.Instant;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class CalculatorTest {
     private static Instant startedAt;
@@ -50,7 +50,7 @@ class CalculatorTest {
         int actualResult = calculatorUnderTest.multiply(0, arg);
 
 //        Assert — ça vaut toujours zéro
-        assertEquals(0, actualResult);
+        assertThat(actualResult).isEqualTo(0);
     }
 
     @ParameterizedTest(name = "{0} + {1} should equal to {2}")
@@ -62,7 +62,7 @@ class CalculatorTest {
         int actualResult = calculatorUnderTest.add(arg1, arg2);
 
 //        Assert
-        assertEquals(expectedResult, actualResult);
+        assertThat(actualResult).isEqualTo(expectedResult);
     }
 
     @Timeout(1)
@@ -88,7 +88,7 @@ class CalculatorTest {
         int somme = calculatorUnderTest.add(a, b);
 
         // Assert
-        assertEquals(5, somme);
+        assertThat(somme).isEqualTo(5);
     }
 
     @Test
@@ -101,6 +101,6 @@ class CalculatorTest {
         int product = calculatorUnderTest.multiply(a, b);
 
         //Assert
-        assertEquals(15, product);
+        assertThat(product).isEqualTo(15);
     }
 }
