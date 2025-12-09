@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.text.MessageFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -102,5 +103,16 @@ class CalculatorTest {
 
         //Assert
         assertThat(product).isEqualTo(15);
+    }
+    @Test
+    public void digitsSetShouldReturnsTheSetOfDigitsOfPositiveInteger(){
+//        given
+        int number = 95897;
+
+//        When
+        Set<Integer> actualDigits =  calculatorUnderTest.digitsSet(number);
+
+//        Then
+        assertThat(actualDigits).containsExactlyInAnyOrder(5, 7, 8, 9);
     }
 }
