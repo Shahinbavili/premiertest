@@ -39,3 +39,11 @@ Thumbs.db
 # Build
 build/
 dist/
+
+# IntelliJ Coverage
+.idea/coverage/
+coverage/
+*.coverage
+
+# Coverage HTML report
+htmlReport/
